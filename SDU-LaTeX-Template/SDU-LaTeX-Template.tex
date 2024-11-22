@@ -12,14 +12,19 @@
 \usepackage{xcolor}
 \usepackage{fontspec}
 \usepackage{titling}
+\usepackage[hidelinks]{hyperref} %隐藏超链接
+
 \setmonofont{Consolas}
 \pagestyle{fancy}
 \fancyhf{}
 \geometry{a4paper}
 
 \lstset{ %代码块设置
-    language = C,
+    language = C, %代码语言
     numbers=left,
+    breaklines=true,        % 开启自动折行
+    breakatwhitespace=false, % 在空白处折行（否则在任意地方折行）
+    columns=fullflexible,   % 更灵活的列宽调整
     keywordstyle=\color{blue!70},
     commentstyle=\color{red!50!green!50!blue!50},
     frame=shadowbox,
@@ -27,7 +32,7 @@
     basicstyle=\ttfamily,
     showstringspaces=false
 }
-\lstset{language=C}
+
 
 \title{山东大学实验报告模板}
 \author{\LaTeX\ by\ 密语Smera1d0}
